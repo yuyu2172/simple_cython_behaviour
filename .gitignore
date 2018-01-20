@@ -1,3 +1,4 @@
 *.c
 *.so
 build/
+cython_simple.cpp

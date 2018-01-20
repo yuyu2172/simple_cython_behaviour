@@ -5,11 +5,14 @@ import numpy
 
 
 extensions = [
-    Extension('cython_modify', ['cython_modify.pyx'],
+    Extension('cython_simple', ['cython_simple.pyx', 'set_integer.cpp'],
               include_dirs=[numpy.get_include()],
+              extra_compile_args=['-std=c++11'],
+              language='c++'
               ),
 ]
 
 setup(
-    ext_modules=cythonize(extensions)
+    ext_modules=cythonize(extensions),
+    # extra_compile_args=["-w", '-g'],
 )
