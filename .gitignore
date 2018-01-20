@@ -2,4 +2,4 @@
 *.so
 build/
 function_call/function_call.cpp
-function_call/build/
+cpp_vector/cpp_simple_vector.cpp
