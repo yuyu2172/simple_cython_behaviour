@@ -1,13 +1,6 @@
 import numpy as np
 cimport numpy as np  # for np.ndarray
 
-from set_integer cimport set_integer_ref
-from set_integer cimport set_integer_ptr
-from set_integer cimport set_integer_ref_ptr
-from set_integer cimport set_integer_ptr_ptr
-from set_integer cimport set_integer_arr_ptr
-from set_integer cimport set_integer_arr_ref_ptr
-
 # Numpy must be initialized. When using numpy from C or Cython you must
 # _always_ do that, or you will have segfaults
 np.import_array()
@@ -15,6 +8,14 @@ np.import_array()
 
 cdef extern from "numpy/arrayobject.h":
     void PyArray_ENABLEFLAGS(np.ndarray arr, int flags)
+
+cdef extern from "set_integer.h":
+    void set_integer_ref(int&)
+    void set_integer_ptr(int*)
+    void set_integer_ref_ptr(int*&)
+    void set_integer_ptr_ptr(int**)
+    void set_integer_arr_ptr(int*)
+    void set_integer_arr_ref_ptr(int*&, int&)
 
 
 cpdef pass_by_ref():
