@@ -1,4 +1,5 @@
-# 1. Pass by Reference
+# Pass by Reference
+
 
 ```bash
 $ python setup.py build_ext --inplace
@@ -19,6 +20,5 @@ $ python -c 'from function_call import pass_by_ref_ptr_arr; print(pass_by_ref_pt
 
 ```
 
-1. The language needs to be set to `c++`.
-
+https://medium.com/@yuyuniitani/calling-c-functions-from-cython-references-pointers-and-arrays-e1ccb461b6d8
 
