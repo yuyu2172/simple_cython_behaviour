@@ -5,7 +5,7 @@ import numpy
 
 
 extensions = [
-    Extension('cython_simple', ['cython_simple.pyx', 'set_integer.cpp'],
+    Extension('function_call', ['function_call.pyx', 'set_integer.cpp'],
               include_dirs=[numpy.get_include()],
               extra_compile_args=['-std=c++11'],
               language='c++'

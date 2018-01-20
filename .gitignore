@@ -1,4 +1,5 @@
 *.c
 *.so
 build/
-cython_simple.cpp
+function_call/function_call.cpp
+function_call/build/
