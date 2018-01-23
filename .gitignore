@@ -1,5 +1,6 @@
 *.c
 *.so
+*.html
 build/
 function_call/function_call.cpp
 cpp_vector/cpp_simple_vector.cpp

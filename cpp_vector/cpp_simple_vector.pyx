@@ -1,6 +1,7 @@
 import numpy as np
 cimport numpy as np
 from libcpp.vector cimport vector
+from libcpp.algorithm cimport sort as stdsort
 
 
 cdef extern from "use_vector.h":
@@ -40,4 +41,17 @@ cpdef cpp_simple_vector_vector():
         else:
             out.append(None)
     return out
+
+
+cpdef cpp_vector_sort():
+    cdef vector[int] s
+    s = vector[int](3)
+    s[0] = 100
+    s[1] = 10
+    s[2] = 1
+    stdsort(s.begin(), s.end())
+    # This is a coercion from std::vector --> python list
+    print(s)
+
+
 
